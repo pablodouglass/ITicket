@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a th:href="@{/nuevoArtista}">Nuevo Artista</a>
+        <h1 th:text="${titulo}"></h1>
+        <table>
+        <th:block th:each="user : ${artistas}">
+    <tr>
+        <td th:text="${user.getNombre_artista}"></td>
+        <td th:text="${user.getCosto}"></td>
+        <td th:text="${user.getFecha}"></td>
+        <td th:text="${user.getCantidad}"></td>
+        <td th:text="${user.getLugar}"></td>
+    </tr>
+        </th:block>
+    </table>
+    </body>
+</html>
